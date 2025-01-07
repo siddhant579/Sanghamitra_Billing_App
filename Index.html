@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanghamitra Billing App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sanghamitra Billing App</h1>
+        
+        <div class="form-container">
+            <label for="itemName">Item Name</label>
+            <select id="itemName">
+                <option value="Bag">Bag</option>
+                <option value="Frame">Frame</option>
+                <option value="T-shirt">T-shirt</option>
+                <option value="Cup">Cup</option>
+                <option value="Print">Print</option>
+                <option value="Book">Books</option>
+            </select>
+
+            <label for="itemPrice">Price (₹)</label>
+            <input type="number" id="itemPrice" placeholder="Enter price" />
+
+            <label for="itemQuantity">Quantity</label>
+            <input type="number" id="itemQuantity" placeholder="Enter quantity" />
+
+            <button id="addItemBtn">Add Item</button>
+        </div>
+
+        <div class="item-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Price (₹)</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="itemTableBody">
+                    <!-- Added items will appear here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="totalAmount">
+            <p>Total Amount: ₹<span id="totalPrice">0</span></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
